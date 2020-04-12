@@ -6,7 +6,6 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 
 
-
 class SignupApiModelViewSet(viewsets.ModelViewSet):
     """ register new user"""
     serializer_class = SignupSerializer
@@ -17,14 +16,5 @@ class SignupApiModelViewSet(viewsets.ModelViewSet):
         if serializer_data.is_valid():
             password = make_password(serializer_data.validated_data.get('password'))
             return serializer.save(password=password)
-
-
-
-
-
-# class ProfileInfoApiModelViewSet(viewsets.ModelViewSet):
-#     serializer_class = ProfileSerializer
-#     queryset = Profile.objects.all()
-
 
 

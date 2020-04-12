@@ -2,7 +2,6 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 
 
-
 class SignupSerializer(serializers.ModelSerializer):
     """Serializer for register new user and get information"""
     password = serializers.CharField(required=True, style={'input_type': 'password'})
@@ -11,10 +10,6 @@ class SignupSerializer(serializers.ModelSerializer):
         model = User
         fields = ('username', 'password')
         write_only = 'password'
-
-
-
-
 
 # class PurchaseSerializer(serializers.ModelSerializer):
 #     """ serializer for complete the profile information of user"""
@@ -38,6 +33,3 @@ class SignupSerializer(serializers.ModelSerializer):
 #         user_instance.first_name = validated_data['first_name']
 #         user_instance.last_name = validated_data['last_name']
 #         serializers.errors
-
-
-

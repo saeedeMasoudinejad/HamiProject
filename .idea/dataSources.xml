@@ -7,7 +7,7 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\saide\PycharmProjects\Purchase\purchase\db.sqlite3</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="identifier.sqlite" uuid="00b68801-49cc-4463-95da-56e57ca8e6a7">
+    <data-source source="LOCAL" name="db.sqlite" uuid="d1d680f1-4176-47a0-b8fa-6d6028fc981e">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
