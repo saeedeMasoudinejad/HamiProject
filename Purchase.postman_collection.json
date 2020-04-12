@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "a415142e-918d-440a-9ec8-f2d4d5a9768c",
+		"name": "Purchase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/register/signup/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test2\",\r\n    \"password\": \"1234\",\r\n    \"email\": \"ma@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						"signup",
+						""
+					]
+				},
+				"description": "register new user/after register user should be login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/register/purchase/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhaWRlIiwiZXhwIjoxNTg2NjEzNzI0LCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NTEzNzI0fQ.dTuQ5SQFdbw0PeHfVWSvHKpqGJuhgNsB5MyfUNg7B3Q",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "02144759176",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "rgfdgfds",
+							"type": "text"
+						},
+						{
+							"key": "date_time",
+							"value": "1398-01-31",
+							"type": "text"
+						},
+						{
+							"key": "purchase",
+							"value": "dfdsgfg",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "ddgfdg",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/buy/purchase/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buy",
+						"purchase",
+						""
+					]
+				},
+				"description": "save a record in Purchase model, should be Autherization"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/register/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"saide\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						"login",
+						""
+					]
+				},
+				"description": "login with sing up user and get jwt toke"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/register/purchase/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhaWRlIiwiZXhwIjoxNTg2NTcwMTA2LCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NDcwMTA2fQ.faRq2SNT4h_NNDOJZ9uI9ofteeAQaexdWswLgFwK6OM",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/buy/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buy",
+						""
+					]
+				},
+				"description": "list of all purchase model"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/register/purchase/1/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhaWRlIiwiZXhwIjoxNTg2NTcwMTA2LCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NDcwMTA2fQ.faRq2SNT4h_NNDOJZ9uI9ofteeAQaexdWswLgFwK6OM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"phone_number\": \"0214475917\",\r\n    \"address\": \"tehran\",\r\n    \"date_time\": \"1290-01-02\",\r\n    \"purchase\": \"fsdfd\",\r\n    \"name\": \"sara rajabi\",\r\n    \"email\": \"sareh@gamil.com\",\r\n    \"user\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/buy/purchase/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buy",
+						"purchase",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "update the record of purchase model base on purchase_id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/register/purchase/3/",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhaWRlIiwiZXhwIjoxNTg2NTcwMTA2LCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NDcwMTA2fQ.faRq2SNT4h_NNDOJZ9uI9ofteeAQaexdWswLgFwK6OM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/buy/purchase/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buy",
+						"purchase",
+						"3",
+						""
+					]
+				},
+				"description": "delete action each purchase record base on purchase id in ulr"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/buy/purchase/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhaWRlIiwiZXhwIjoxNTg2NjEzNzI0LCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNTg2NTEzNzI0fQ.dTuQ5SQFdbw0PeHfVWSvHKpqGJuhgNsB5MyfUNg7B3Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/buy/purchase/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buy",
+						"purchase",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
